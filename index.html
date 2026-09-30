@@ -4,12 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c0d10">
-  <meta name="description" content="Links e perfil de Renan, desenvolvedor back-end.">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Links e perfil de Renan L. Vendramini, desenvolvedor back-end com mais de 10 anos de experiência em Node.js, PHP, Ruby on Rails, MySQL e Redis.">
+  <meta name="author" content="Renan L. Vendramini">
+  <link rel="canonical" href="https://www.rlvendramini.dev.br/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Renan L. Vendramini">
+  <meta property="og:title" content="Renan L. Vendramini — Links">
+  <meta property="og:description" content="Links e perfil de Renan L. Vendramini, desenvolvedor back-end com mais de 10 anos de experiência em Node.js, PHP, Ruby on Rails, MySQL e Redis.">
+  <meta property="og:url" content="https://www.rlvendramini.dev.br/">
+  <meta property="og:image" content="https://www.rlvendramini.dev.br/android-chrome-512x512.png">
+  <meta name="twitter:card" content="summary">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <title>Renan L. Vendramini — Links</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Renan L. Vendramini",
+      "url": "https://www.rlvendramini.dev.br/",
+      "jobTitle": "Desenvolvedor back-end",
+      "description": "Desenvolvedor back-end com mais de 10 anos de experiência criando para a web.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressCountry": "BR"
+      },
+      "knowsAbout": ["Node.js", "PHP", "Ruby on Rails", "MySQL", "Redis"],
+      "sameAs": [
+        "https://github.com/rlvendramini",
+        "https://www.linkedin.com/in/rlvendramini/"
+      ]
+    }
+  </script>
   <style>
     :root {
       color-scheme: dark;
@@ -76,7 +109,7 @@
 
     .stack {
       margin: 14px 0 32px;
-      color: #777b85;
+      color: #8f939d;
       font-size: 12px;
       letter-spacing: .025em;
     }
@@ -110,15 +143,19 @@
 
     footer {
       margin-top: 33px;
-      color: #666973;
+      color: #8b8f99;
       font-size: 11px;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
 
+    /* Anima só `transform`: manter opacity em 1 garante que o conteúdo seja
+       pintado no primeiro frame. Animar opacity a partir de 0 atrasava (ou
+       impedia) o First Contentful Paint, o que fazia o Lighthouse abortar
+       com NO_FCP. */
     @keyframes appear {
-      from { opacity: 0; transform: translateY(9px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { transform: translateY(9px); }
+      to { transform: translateY(0); }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -134,10 +171,10 @@
     <p class="stack">Node.js · PHP · Ruby on Rails · MySQL · Redis</p>
 
     <nav aria-label="Meus links">
-      <a class="link" href="https://github.com/rlvendramini" target="_blank" rel="noopener noreferrer">
+      <a class="link" href="https://github.com/rlvendramini" target="_blank" rel="me noopener noreferrer">
         <span>GitHub</span><span aria-hidden="true">↗</span>
       </a>
-      <a class="link" href="https://www.linkedin.com/in/rlvendramini/" target="_blank" rel="noopener noreferrer">
+      <a class="link" href="https://www.linkedin.com/in/rlvendramini/" target="_blank" rel="me noopener noreferrer">
         <span>LinkedIn</span><span aria-hidden="true">↗</span>
       </a>
     </nav>
